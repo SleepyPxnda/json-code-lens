@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>io.github.sleepypxnda.jsonloglens</id>
+    <name>JSON Log Lens</name>
+    <vendor url="https://github.com/SleepyPxnda">SleepyPxnda</vendor>
+    <description><![CDATA[
+        Makes JSON log lines in the Run/Debug console readable.
+        Every console line that is a complete JSON object is shown through a template of your choice, for example
+        <code>{time} {level} {#logger}[{logger}] {/logger}{msg}</code>. All other lines stay as they are.
+        <ul>
+            <li>Fields by name, nested fields by path: <code>{source.file}</code></li>
+            <li>Optional sections that only appear when a field is present: <code>{#logger}...{/logger}</code></li>
+            <li>Tabs and line breaks: <code>\t</code> and <code>\n</code></li>
+            <li>Live preview and an on/off switch in the settings</li>
+        </ul>
+        Configure it under <b>Settings | Tools | JSON Log Lens</b>.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <consoleInputFilterProvider implementation="io.github.sleepypxnda.jsonloglens.JsonLogInputFilterProvider"/>
+        <applicationConfigurable
+                parentId="tools"
+                id="io.github.sleepypxnda.jsonloglens.settings"
+                displayName="JSON Log Lens"
+                instance="io.github.sleepypxnda.jsonloglens.JsonLogSettingsConfigurable"/>
+    </extensions>
+</idea-plugin>
