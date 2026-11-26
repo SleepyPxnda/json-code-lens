@@ -16,7 +16,7 @@ with the template `{time} {level} {msg} ({source.file}:{source.line})` becomes
 
 ## Installation
 
-1. Download `json-log-lens-<version>.zip` from the [latest release](https://github.com/SleepyPxnda/json-log-lens/releases/latest).
+1. Download `json-log-lens-<version>.zip` from the [latest release](https://github.com/SleepyPxnda/json-code-lens/releases/latest).
 2. In IntelliJ: **Settings | Plugins | ⚙ | Install Plugin from Disk…** and pick the ZIP.
 
 Works with IntelliJ-based IDEs from version 2025.3 on.
